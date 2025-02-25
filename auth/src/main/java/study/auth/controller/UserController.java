@@ -1,12 +1,10 @@
 package study.auth.controller;
 
-import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import study.auth.dto.LoginRequestDto;
 import study.auth.dto.SignupRequestDto;
 import study.auth.service.UserService;
 
