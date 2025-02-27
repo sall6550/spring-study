@@ -1,13 +1,14 @@
 package study.auth.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
+import study.auth.dto.ProductRequestDto;
 import study.auth.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import study.auth.entity.UserRoleEnum;
 import study.auth.security.UserDetailsImpl;
 
@@ -34,5 +35,11 @@ public class ProductController {
         }
 
         return "redirect:/";
+    }
+
+    @PostMapping("/validation")
+    @ResponseBody
+    public ProductRequestDto testValid(@RequestBody @Valid ProductRequestDto requestDto) {
+        return requestDto;
     }
 }
