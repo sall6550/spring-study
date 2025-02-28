@@ -1,11 +1,8 @@
 package study.springresttemplateclient.controller;
 
+import org.springframework.web.bind.annotation.*;
 import study.springresttemplateclient.dto.ItemDto;
 import study.springresttemplateclient.service.RestTemplateService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -29,7 +26,7 @@ public class RestTemplateController {
         return restTemplateService.getCallList();
     }
 
-    @GetMapping("/post-call")
+    @PostMapping("/post-call")
     public ItemDto postCall(String query) {
         return restTemplateService.postCall(query);
     }
