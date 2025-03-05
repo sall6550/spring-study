@@ -13,6 +13,6 @@ public class AController {
     @GetMapping("/hi")
     public String hello() {
         String hello = bServiceClient.getHello();
-        return "sevice-a: hi ###### service-b: " + hello;
+        return "docker-a: hi ###### docker-b: " + hello;
     }
 }
