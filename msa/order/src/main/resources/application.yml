@@ -1,8 +1,10 @@
+server:
+  port: 19092
+
 spring:
   application:
     name: order-service
-server:
-  port: 19091
+
 eureka:
   client:
     service-url:
